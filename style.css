@@ -14,12 +14,14 @@ body {
     width: 45em;
     height: 50em;
     margin: 3em auto;
+    border-radius: 30px;
 }
 
 .tittle {
 background-color: khaki;
 display: flex;
 justify-content: center;
+border-radius: 30px;
 }
 
 h1 {
@@ -46,3 +48,9 @@ h1 {
     background-color: lightcyan;
     border-radius: 15px
 ;}
+
+.sketch-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+}
