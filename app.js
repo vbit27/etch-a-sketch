@@ -1,21 +1,26 @@
-const sketchContainer = document.querySelector('.sketch-container');
+const sketchContainer = document.getElementById('container');
 
-/*const sketchField = document.createElement('div');
-sketchField.style.backgroundColor = 'white';
-sketchField.textContent = 'Haii';
-sketchField.style.border = '2px solid black';
+const sketchField = document.createElement('div');
 
-sketchContainer.appendChild(sketchField);*/
 
-const sizeOfSketch = prompt('How big');
+
+
+
 
 function addBoxes(num) {
-    for (let i = 0; i < num; i++) {
+    sketchContainer.style.gridTemplateColumns = `repeat(${num}, auto)`
+    sketchContainer.style.gridTemplateRows = `repeat(${num}, auto)`
+    
+    for (let i = 0; i < num*num; i++) {
         
+
         const sketchField = document.createElement('div');
         sketchField.style.backgroundColor = 'white';
-        sketchField.textContent = 'Haii';
-        sketchField.style.border = '2px solid black';
+        sketchField.style.padding = '2em';
+        sketchField.style.maxWidth = '100%';
+        sketchField.style.maxHeight = '100%';
+
+        sketchField.style.border = '0.1px solid grey';
         sketchField.classList = `box${i}`;
 
         
@@ -24,4 +29,6 @@ function addBoxes(num) {
     }
 }
 
-addBoxes(sizeOfSketch);
+addBoxes(15)
+
+
