@@ -1,0 +1,48 @@
+body {
+    background-image: url(./img/player.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    background-size: 40%;
+
+    font-family: 'Smythe', cursive;
+    ;}
+
+.big-container {
+    background-color: lavender;
+    width: 45em;
+    height: 50em;
+    margin: 3em auto;
+}
+
+.tittle {
+background-color: khaki;
+display: flex;
+justify-content: center;
+}
+
+h1 {
+    font-size: 5em;
+    letter-spacing: 5px;
+    color: #19c5af;
+    text-shadow: 4px 4px #545461;
+    padding: 0;
+    margin: 0;
+}
+
+.buttons-container {
+    background-color: lightcoral;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons-container button {
+    height: 4em;
+    width: 4em;
+    background-color: lightcyan;
+    border-radius: 15px
+;}
