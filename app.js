@@ -23,7 +23,6 @@ function pickSize() {
 
 function addBoxes(size = 20) {
     sketchContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-
         for (let i = 0; i < size*size; i++) {
             const sketchField = document.createElement('div');
             sketchField.classList.add('boxes');
@@ -51,7 +50,7 @@ function startPainting() {
 function startPaintingRed() {
     sketchContainer.addEventListener('mouseover', function(e) {
         if (e.target !== e.currentTarget) {
-            sketchSquares.item(e.target.accessKey).classList.add('red');  
+            sketchSquares.item(e.target.accessKey).classList.add('red');
             }
         })
 }
