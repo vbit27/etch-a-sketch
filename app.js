@@ -1,28 +1,32 @@
-
-
 const sketchContainer = document.getElementById('sketch-container');
 
-
-
+// Add boxes inside container
 
 function addBoxes(num) {
-
-    //repeat(auto-fit, minmax(75px, 1fr))
     sketchContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
 
-    
     for (let i = 0; i < num*num; i++) {
         const sketchField = document.createElement('div');
-        sketchField.style.backgroundColor = 'white';
-        sketchContainer.style.height = '0';
-        sketchField.style.paddingBottom = '70%';
-        sketchField.style.border = '1px solid grey';
-        sketchField.classList = `box${i}`;
+        sketchField.classList.add('boxes');
+        sketchField.accessKey = `${i}`;
         sketchContainer.appendChild(sketchField);
 
     }
 }
 
 addBoxes(50)
+
+
+// Change color when mouse over
+
+const sketchSquares = document.querySelectorAll('.boxes');
+
+
+
+sketchContainer.addEventListener('mouseover', function(e) {
+    if (e.target !== e.currentTarget) {
+        sketchSquares.item(e.target.accessKey).classList.add('black');  
+    }
+})
 
 
