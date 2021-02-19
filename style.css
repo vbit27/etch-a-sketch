@@ -65,3 +65,7 @@ h1 {
 .black {
     background-color: grey;
 }
+
+button {
+    background-color: hotpink;
+}

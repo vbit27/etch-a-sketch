@@ -1,5 +1,6 @@
 const sketchContainer = document.getElementById('sketch-container');
 const pickSizeButton = document.getElementById('pick-size');
+const resetSettings = document.getElementById('erase');
 
 let size;
 let sketchSquares;
@@ -41,8 +42,24 @@ function startPainting() {
     })
 }
 
+//Reset all settings
+
+function reset () {
+    sketchContainer.querySelectorAll('*').forEach(n => n.remove()); //delets the old divs
+    addBoxes(size);
+}
+
 
 pickSizeButton.addEventListener('click', pickSize);
+resetSettings.addEventListener('click', reset);
 addBoxes();
 
 
+
+
+
+
+
+
+// PYET NE DISCORD
+//sketchContainer.querySelectorAll('*').forEach(n => n.remove()); //delets the old divs
