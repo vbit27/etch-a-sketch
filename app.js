@@ -1,6 +1,8 @@
 const sketchContainer = document.getElementById('sketch-container');
 const pickSizeButton = document.getElementById('pick-size');
 const resetSettings = document.getElementById('erase');
+const changeColor = document.getElementById('color');
+const changeColorBlack = document.getElementById('black');
 
 let size;
 let sketchSquares;
@@ -32,15 +34,28 @@ function addBoxes(size = 20) {
     startPainting(); //initialize painting
 }
 
-// Change color when mouse over
+// Change color when mouse over (Black)
 
 function startPainting() {
     sketchContainer.addEventListener('mouseover', function(e) {
     if (e.target !== e.currentTarget) {
-        sketchSquares.item(e.target.accessKey).classList.add('black');  
+        sketchSquares.item(e.target.accessKey).classList.add('black'); 
+        sketchSquares.item(e.target.accessKey).classList.remove('red'); 
+
         }
     })
 }
+
+// Change color when mouse over (Red)
+
+function startPaintingRed() {
+    sketchContainer.addEventListener('mouseover', function(e) {
+        if (e.target !== e.currentTarget) {
+            sketchSquares.item(e.target.accessKey).classList.add('red');  
+            }
+        })
+}
+
 
 //Reset all settings
 
@@ -52,6 +67,8 @@ function reset () {
 
 pickSizeButton.addEventListener('click', pickSize);
 resetSettings.addEventListener('click', reset);
+changeColor.addEventListener('click', startPaintingRed);
+changeColorBlack.addEventListener('click', startPainting);
 addBoxes();
 
 
