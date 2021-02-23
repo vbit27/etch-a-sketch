@@ -28,7 +28,7 @@ const addBoxes = (size = 20) => {
 const startPainting = () => {
     sketchContainer.addEventListener('mouseover', (e) => {
         if (e.target !== e.currentTarget) {
-            sketchSquares[e.target.accessKey].style.backgroundColor = 'grey';
+            sketchSquares[e.target.accessKey].style.backgroundColor = 'white';
         }
     })
 };
